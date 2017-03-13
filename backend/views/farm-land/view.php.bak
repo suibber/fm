@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="detail">
+        <p>编号：123</p>
+        <p>状态：需要除草、浇水</p>
+        <p>位置：生态园东侧200米</p>
+        <p>优势：环境好，光照充足，事宜种植向日葵。。</p>
+        <p>地球日：28天</p>
+        <p>预计成熟：35天</p>
+    </div>
+    <p class="tips">142人浏览，3人收藏</p>
+    <div style="clear: both;">
+        <button class="add">收藏</button>
+        <button class="buy">购买</button>
+        <button class="buy">浇水2金币</button>
+        <button class="buy">除草5金币</button>
+    </div>
+</div>

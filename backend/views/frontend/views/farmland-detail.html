@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+		<title>梦想农场</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css">
+		<style type="text/css">
+			.detail {
+				background-color: #fff;
+				font-size: .32rem;
+				padding: 0.3rem;
+				margin-top: 0.2rem;
+			}
+			.tips {
+				font-size: .28rem;
+				color: #666;
+				margin: 0.3rem 0.3rem 0 0;
+				float: right;
+			}
+			button {
+				float: right;
+				font-size: .28rem;
+				padding: 0.2rem 0;
+			  width: 1.5rem;
+			  text-align: center;
+			  border: 0;
+			  border-radius: 5px;
+			  margin-top: 0.3rem;
+			  margin-right: 0.2rem;
+			}
+			.buy {
+				background-color: #2185d0;
+				color: #fff;
+			}
+			.add {
+				color: #767676;
+				background-color: transparent;
+				box-shadow: 0 0 0 1px #767676 inset;
+			}
+			.footer-nav {
+		    background-color: #f8f8ff;
+		    bottom: 0;
+		    height: 1.2rem;
+		    margin: 0 auto;
+		    max-width: 1200px;
+		    position: fixed;
+		    width: 100%;
+		    align-items: center;
+		    display: flex;
+			}
+			.footer-nav li {
+				flex: 1;
+		    font-size: 0.28rem;
+		    text-align: center;
+			}
+			.footer-nav li:nth-child(1) i {
+				display: block;
+				width: .4rem;
+				height: .4rem;
+		    background: url('../images/icon-home.png') no-repeat;
+		    background-size: cover;
+		    margin: 0 auto 0.06rem;
+			}
+			.footer-nav li:nth-child(1).active,.footer-nav li:nth-child(2).active,.footer-nav li:nth-child(3).active {
+				color: #84ca4d;
+			}
+			.footer-nav li:nth-child(1).active i {
+		    background: url('../images/icon-home-green.png') no-repeat;
+		    background-size: cover;
+			}
+			.footer-nav li:nth-child(3) i {
+				display: block;
+				width: .4rem;
+				height: .4rem;
+		    background: url('../images/person-white.png') no-repeat;
+		    background-size: cover;
+		    margin: 0 auto 0.06rem;
+			}
+			.footer-nav li:nth-child(3).active i {
+		    background: url('../images/person-white-green.png') no-repeat;
+		    background-size: cover;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="header">
+			<img src="">
+			<h1>梦想农场</h1>
+		</header>
+		<div class="container">
+			<div class="detail">
+				<p>编号：123</p>
+				<p>状态：需要除草、浇水</p>
+				<p>位置：生态园东侧200米</p>
+				<p>优势：环境好，光照充足，事宜种植向日葵。。</p>
+				<p>地球日：28天</p>
+				<p>预计成熟：35天</p>
+			</div>
+			<p class="tips">142人浏览，3人收藏</p>
+			<div style="clear: both;">
+				<button class="add">收藏</button>
+				<button class="buy">购买</button>
+				<button class="buy">浇水2金币</button>
+				<button class="buy">除草5金币</button>
+			</div>
+		</div>
+		<footer>
+			<ul class="footer-nav">
+				<li><i></i>首页</li>
+				<li class="active"><i></i>菜地</li>
+				<li><i></i>我的</li>
+			</ul>
+		</footer>
+		<script src="../js/common.js"></script>
+	</body>
+</html>

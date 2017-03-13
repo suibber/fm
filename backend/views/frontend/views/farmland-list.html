@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+		<title>梦想农场</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css">
+		<style type="text/css">
+			.list div {
+				background-color: #fff;
+				font-size: .32rem;
+				padding: 0.2rem 0.3rem;
+				margin-top: 0.2rem ;
+				border-radius: 5px;
+			}
+			.list div button {
+				font-size: .28rem;
+				float: right;
+			  background-color: #00d370;
+			  border: 0;
+			  border-radius: 5px;
+			  padding: 0.2rem 0;
+			  width: 1.5rem;
+			  text-align: center;
+			  color: #fff;
+			}
+			.list div button[disabled] {
+			  background-color: #eee;
+			  color: #c1c1c1;
+			}
+			.footer-nav {
+		    background-color: #f8f8ff;
+		    bottom: 0;
+		    height: 1.2rem;
+		    margin: 0 auto;
+		    max-width: 1200px;
+		    position: fixed;
+		    width: 100%;
+		    align-items: center;
+		    display: flex;
+			}
+			.footer-nav li {
+				flex: 1;
+		    font-size: 0.28rem;
+		    text-align: center;
+			}
+			.footer-nav li:nth-child(1) i {
+				display: block;
+				width: .4rem;
+				height: .4rem;
+		    background: url('../images/icon-home.png') no-repeat;
+		    background-size: cover;
+		    margin: 0 auto 0.06rem;
+			}
+			.footer-nav li:nth-child(1).active,.footer-nav li:nth-child(2).active,.footer-nav li:nth-child(3).active {
+				color: #84ca4d;
+			}
+			.footer-nav li:nth-child(1).active i {
+		    background: url('../images/icon-home-green.png') no-repeat;
+		    background-size: cover;
+			}
+			.footer-nav li:nth-child(3) i {
+				display: block;
+				width: .4rem;
+				height: .4rem;
+		    background: url('../images/person-white.png') no-repeat;
+		    background-size: cover;
+		    margin: 0 auto 0.06rem;
+			}
+			.footer-nav li:nth-child(3).active i {
+		    background: url('../images/person-white-green.png') no-repeat;
+		    background-size: cover;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="header">
+			<img src="">
+			<h1>梦想农场</h1>
+		</header>
+		<div class="container">
+			<img src="" alt="图片">
+			<section class="list">
+				<div>
+					<p>编号：123<button>可购买</button></p>
+					<p>位置：生态园东侧200米</p>
+					<p>优势：环境好，光照充足，事宜种植向日葵。。</p>
+				</div>
+				<div>
+					<p>编号：123<button disabled="true">已售</button></p>
+					<p>位置：生态园东侧200米</p>
+					<p>优势：环境好，光照充足，事宜种植向日葵。。</p>
+				</div>
+				<div>
+					<p>编号：123<button>可购买</button></p>
+					<p>位置：生态园东侧200米</p>
+					<p>优势：环境好，光照充足，事宜种植向日葵。。</p>
+				</div>
+				<div>
+					<p>编号：123<button>可购买</button></p>
+					<p>位置：生态园东侧200米</p>
+					<p>优势：环境好，光照充足，事宜种植向日葵。。</p>
+				</div>
+				<div>
+					<p>编号：123<button>可购买</button></p>
+					<p>位置：生态园东侧200米</p>
+					<p>优势：环境好，光照充足，事宜种植向日葵。。</p>
+				</div>
+				<div>
+					<p>编号：123<button>可购买</button></p>
+					<p>位置：生态园东侧200米</p>
+					<p>优势：环境好，光照充足，事宜种植向日葵。。</p>
+				</div>
+			</section>
+		</div>
+		<footer>
+			<ul class="footer-nav">
+				<li><i></i>首页</li>
+				<li class="active"><i></i>菜地</li>
+				<li><i></i>我的</li>
+			</ul>
+		</footer>
+		<script src="../js/common.js"></script>
+	</body>
+</html>
