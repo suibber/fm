@@ -6,20 +6,14 @@
     <div class="fullwidthbanner-container">
         <div class="fullwidthbanner">
             <ul>
-                <li data-transition="3dcurtain-horizontal" data-slotamount="15" data-masterspeed="300">
+                <li data-transition="3dcurtain-horizontal" data-slotamount="15" data-masterspeed="100">
                     <img src="images/slides/slide3.jpg" alt="" />
                 </li>
-                <li data-transition="3dcurtain-vertical" data-slotamount="15" data-masterspeed="300" data-link="#">
-                    <img src="images/slides/slide5.jpg" alt="" />
-                </li>
-                <li data-transition="papercut" data-slotamount="15" data-masterspeed="300" data-link="#">
+                <li data-transition="papercut" data-slotamount="15" data-masterspeed="100" data-link="#">
                     <img src="images/slides/slide2.jpg" alt="" />
                 </li>
-                <li data-transition="turnoff" data-slotamount="15" data-masterspeed="300">
+                <li data-transition="turnoff" data-slotamount="15" data-masterspeed="100">
                     <img src="images/slides/slide1.jpg" alt="" />
-                </li>
-                <li data-transition="flyin" data-slotamount="15" data-masterspeed="300">
-                    <img src="images/slides/slide6.jpg" alt="" /> 
                 </li>
             </ul>
         </div>
@@ -27,8 +21,6 @@
 </div>
 
 <div style="text-align:center;clear:both;">
-<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
-<script src="/follow.js" type="text/javascript"></script>
 </div>
 
 <div class="container">

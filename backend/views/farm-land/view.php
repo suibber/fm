@@ -6,6 +6,6 @@
         <p><?=$model->intra?></p>
     </div>
     <div style="clear: both;">
-        <a class="buy" href="/message">购买</a>
+        <a class="buy" href="/message/index?id=<?=$model->id?>">购买</a>
     </div>
 </div>

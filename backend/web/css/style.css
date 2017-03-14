@@ -64,7 +64,7 @@ a:hover {
 .tp-bullets.simplebullets.round .bullet.selected,
 .tp-bullets.simplebullets.navbar .bullet:hover,
 .tp-bullets.simplebullets.navbar .bullet.selected {	
-	background:#e1472f !important; 
+	/**background:#e1472f !important; **/
 }
 .tp-leftarrow:hover,
 .tp-rightarrow:hover {	
