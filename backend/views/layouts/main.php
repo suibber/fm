@@ -39,7 +39,8 @@ $class = array_shift($class);
 		<footer>
 			<ul class="footer-nav">
 				<li <?=($class=='farm-article'?'class="active"':'')?>><a href="/farm-article"><i></i>首页</a></li>
-				<li <?=($class=='farm-land'?'class="active"':'')?>><a href="/farm-land"><i></i>菜地</a></li>
+				<li <?=($class=='farm-item'?'class="active"':'')?>><a href="/farm-item"><i></i>市场</a></li>
+				<li <?=($class=='farm-land'?'class="active"':'')?>><a href="/farm-land"><i></i>田园</a></li>
 				<li <?=($class=='user-center'?'class="active"':'')?>><a href="/user-center"><i></i>我的</a></li>
 			</ul>
 		</footer>

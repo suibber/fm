@@ -22,10 +22,12 @@ class FarmArticle extends \yii\db\ActiveRecord
     const TYPE_NEWS = 1;
     const TYPE_KNOWLEDGE = 2;
     const TYPE_OTHER = 3;
+    const TYPE_SHARE = 4;
     public static $TYPES = [
         self::TYPE_NEWS => '新闻',
         self::TYPE_KNOWLEDGE => '知识',
         self::TYPE_OTHER => '信息',
+        self::TYPE_SHARE => '活动',
     ];
 
     /**
@@ -82,9 +84,14 @@ class FarmArticle extends \yii\db\ActiveRecord
         return self::$TYPES[$this->type];
     }
 
-    public static function getArticles($page)
+    public static function getArticles($page, $type=0)
     {
-        $articles = self::find()  
+        $articles = self::find();
+        if ($type) {
+            $articles = $articles
+                ->where(['type' => $type]);
+        }
+        $articles = $articles 
             ->offset(($page[1]-1)*$page[0])
             ->limit($page[0])         
             ->orderBy(['update_time' => SORT_DESC])

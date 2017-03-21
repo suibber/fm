@@ -406,7 +406,7 @@ background: url('../images/person-green.png') no-repeat;
                 display: block;
                 width: .4rem;
                 height: .4rem;
-            background: url('../images/icon-farm-green.jpg') no-repeat;
+            background: url('../images/gray.png') no-repeat;
             background-size: cover;
             margin: 0 auto 0.06rem;
             }
@@ -418,10 +418,22 @@ background: url('../images/person-green.png') no-repeat;
             background-size: cover;
             }
             .footer-nav li:nth-child(2).active i {
-            background: url('../images/icon-farm.jpg') no-repeat;
+            background: url('../images/green.png') no-repeat;
             background-size: cover;
             }
             .footer-nav li:nth-child(3) i {
+                display: block;
+                width: .4rem;
+                height: .4rem;
+            background: url('../images/icon-farm-green.jpg') no-repeat;
+            background-size: cover;
+            margin: 0 auto 0.06rem;
+            }
+            .footer-nav li:nth-child(3).active i {
+            background: url('../images/icon-farm.jpg') no-repeat;
+            background-size: cover;
+            }
+            .footer-nav li:nth-child(4) i {
                 display: block;
                 width: .4rem;
                 height: .4rem;
@@ -429,7 +441,7 @@ background: url('../images/person-green.png') no-repeat;
             background-size: cover;
             margin: 0 auto 0.06rem;
             }
-            .footer-nav li:nth-child(3).active i {
+            .footer-nav li:nth-child(4).active i {
             background: url('../images/person-green.png') no-repeat;
             background-size: cover;
             }
