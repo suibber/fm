@@ -45,7 +45,7 @@ class FarmArticle extends \yii\db\ActiveRecord
     {
         return [
             [['type', 'viewer_num', 'collect_num'], 'integer'],
-            [['content'], 'string'],
+            [['content', 'intro'], 'string'],
             [['create_time', 'update_time'], 'safe'],
             [['title'], 'string', 'max' => 200],
             [['create_user'], 'string', 'max' => 100]
@@ -60,6 +60,7 @@ class FarmArticle extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'type' => 'Type',
+            'intro' => 'intro',
             'title' => 'Title',
             'content' => 'Content',
             'create_time' => 'Create Time',

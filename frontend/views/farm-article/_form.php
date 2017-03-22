@@ -16,6 +16,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'intro')->textArea() ?>
     <?= $form->field($model, 'content')->widget(common\redactor\widgets\Redactor::className())?>
 
 

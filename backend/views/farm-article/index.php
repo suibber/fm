@@ -6,11 +6,11 @@
     <div class="fullwidthbanner-container">
         <div class="fullwidthbanner">
             <ul>
-                <li data-transition="3dcurtain-horizontal" data-slotamount="15" data-masterspeed="100">
-                    <img src="images/slides/slide3.jpg" alt="" />
-                </li>
                 <li data-transition="papercut" data-slotamount="15" data-masterspeed="100" data-link="#">
                     <img src="images/slides/slide2.jpg" alt="" />
+                </li>
+                <li data-transition="3dcurtain-horizontal" data-slotamount="15" data-masterspeed="100">
+                    <img src="images/slides/slide3.jpg" alt="" />
                 </li>
                 <li data-transition="turnoff" data-slotamount="15" data-masterspeed="100">
                     <img src="images/slides/slide1.jpg" alt="" />
@@ -24,12 +24,18 @@
 </div>
 
 <div class="container">
+    <div style="border-top:10px solid #e5e5e5;dispaly:block;"></div>
     <section>
         <?php foreach ($articles as $article) {?>
-            <div class="list-div">
+            <div class="list-div" style="border-bottom:1px solid #e5e5e5">
                 <a href='/farm-article/view?id=<?=$article['id']?>'>
-                    [<?=$article['type_label']?>] 
-                    <?=$article['title']?>
+                    <div style="line-height: 30px;font-size: 16px;color: #333;font-weight: 700;">
+                        <span style="padding:4px 6px;color: #00ae66;background-color: #e5f7ef;"><?=$article['type_label']?></span>
+                        <?=$article['title']?>
+                    </div>
+                    <div style="margin: 2px 0;color: #999;line-height: 1.25;">
+                        <?=$article['intro']?$article['intro']:$article['title']?>
+                    </div>
                 </a>
             </div>
         <?php } ?>
