@@ -12,7 +12,7 @@
                     <?php if ($model->store_num==$model->sold_num) { ?>
                         <button disabled="true" style="margin:0">已售光</button> 
                     <?php } else { ?>
-                        <button style="margin:0">可购买</button>
+                        <button style="margin:0" onclick="window.location.href='/message/index?id=<?=$model->id?>'">购买</button>
                     <?php } ?>
                 </p>
                 <p><?=$model->content?></p>

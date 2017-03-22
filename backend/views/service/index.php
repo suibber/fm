@@ -2,8 +2,8 @@
     <div class="personal-header">
         <img src="https://static.clouderwork.com/static/images/default-avatar02.png">
         <div>
-            <p>巴拉巴拉小魔仙</p>
-            <p>菜农</p>
+            <p>田园阳光农场</p>
+            <p>农场管家</p>
         </div>
     </div>
     <ul class="phone-list">

@@ -28,8 +28,17 @@ class UserCenterController extends BaseController
 
     public function actionIndex()
     {   
-        return $this->render('index',[
-        ]); 
+        $is_guest = Yii::$app->user->isGuest;
+        if ($is_guest) {
+            header("Location:/wechat/user");
+            exit;
+        } else {
+            $user_id = Yii::$app->user->id;
+            $user_info = User::findOne($user_id);
+            return $this->render('index',[
+                'user_info' => $user_info,
+            ]); 
+        }
     }
 
     /**

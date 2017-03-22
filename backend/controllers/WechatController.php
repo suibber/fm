@@ -7,6 +7,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use backend\controllers\BaseController;
+use common\models\User;
 use vendor\wechat;
 
 /**
@@ -145,7 +146,8 @@ class WechatController extends BaseController
         
     }
 
-    public function actionUser()
+
+    public function actionUserNew()
     {
         $code = Yii::$app->request->get('code');
         $state = Yii::$app->request->get('state');
@@ -153,7 +155,7 @@ class WechatController extends BaseController
         $secret = '2205a881b8e28e8a7be00b601b44782a';
 
         if (!$code) {
-            $url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb411afddd1a71801&redirect_uri=http%3A%2F%2Ffarm.lianjievip.com%2Fwechat%2Fuser&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect";
+            $url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb411afddd1a71801&redirect_uri=http%3A%2F%2Ffarm.lianjievip.com%2Fwechat%2Fuser-new&response_type=code&scope=snsapi_userinfo&state=123#wechat_redirect";
             header("Location:$url");
             exit;
         } elseif ($code) {
@@ -165,8 +167,54 @@ class WechatController extends BaseController
             $user_url = "https://api.weixin.qq.com/sns/userinfo?access_token=$access_token&openid=$openid&lang=zh_CN";
             $user_info = file_get_contents($user_url);
             $user_info = json_decode($user_info);
-            var_dump($user_info);exit;
+            $user = User::getUserInfoByOpenid($openid);
+            $user->wechat_name = $user_info->nickname;
+            $user->wechat_head = $user_info->headimgurl;
+            $user->sex = $user_info->sex;
+            $user->city = $user_info->city;
+            $user->province = $user_info->province;
+            $user->country = $user_info->country;
+            if ($user->save()) {
+                $user_info = User::getUserInfoByOpenid($openid);
+                Yii::$app->user->login($user_info);
+                header("Location:/farm-article");
+                exit;
+            }
         }
-        echo 2;exit;
+    }
+
+    public function actionUser()
+    {
+        $code = Yii::$app->request->get('code');
+        $state = Yii::$app->request->get('state');
+        $appid = 'wxb411afddd1a71801';
+        $secret = '2205a881b8e28e8a7be00b601b44782a';
+
+        if (!$code) {
+            $url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb411afddd1a71801&redirect_uri=http%3A%2F%2Ffarm.lianjievip.com%2Fwechat%2Fuser&response_type=code&scope=snsapi_base&state=123#wechat_redirect";
+            header("Location:$url");
+            exit;
+        } elseif ($code) {
+            $url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=$appid&secret=$secret&code=$code&grant_type=authorization_code";
+            $content = file_get_contents($url);
+            $content = json_decode($content);
+            $openid = $content->openid;
+            $user_info = User::getUserInfoByOpenid($openid);
+            if (isset($user_info->wechat_name) && $user_info->wechat_name) {
+                Yii::$app->user->login($user_info);
+                header("Location:/farm-article");
+                exit;
+            } else {
+                if (!$user_info) {
+                    $user = new User;
+                    $user->wechat_openid = $content->openid;
+                    $user->email = $content->openid.'@126.com';
+                    $user->username = $user->wechat_openid;
+                    $user->save();
+                }
+                header("Location:/wechat/user-new");
+                exit;
+            }
+        }
     }
 }

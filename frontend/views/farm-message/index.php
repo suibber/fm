@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel common\models\FarmItemSearch */
+/* @var $searchModel common\models\FarmMessageSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Farm Items';
+$this->title = 'Farm Messages';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="farm-item-index">
+<div class="farm-message-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Farm Item', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Farm Message', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -26,15 +26,10 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'title',
-            'display_order',
-            'store_num',
-            'sold_num',
-            'real_price',
-            'sale_price',
-            // 'title',
-            // 'content:ntext',
-            // 'icon',
+            'user_id',
+            'user_name',
+            'message',
+            'return_message',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

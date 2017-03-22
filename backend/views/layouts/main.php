@@ -23,7 +23,7 @@ $class = array_shift($class);
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title?$this->title:'梦想农场') ?></title>
+    <title><?= Html::encode($this->title?$this->title:'田园阳光农场') ?></title>
     <?php $this->head() ?>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
 </head>

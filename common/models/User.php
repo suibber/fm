@@ -186,4 +186,12 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
+
+    public static function getUserInfoByOpenid($openid)
+    {
+        $info = User::find()
+            ->where(['wechat_openid' => $openid])
+            ->one();
+        return $info;
+    }
 }

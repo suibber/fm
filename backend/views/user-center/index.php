@@ -1,8 +1,8 @@
 <div class="container">
     <div class="personal-header">
-        <img src="https://static.clouderwork.com/static/images/default-avatar02.png">
+        <img src="<?=$user_info->wechat_head?>">
         <div>
-            <p>巴拉巴拉小魔仙</p>
+            <p><?=$user_info->wechat_name?></p>
             <p>菜农</p>
         </div>
     </div>
